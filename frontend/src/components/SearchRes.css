@@ -1,0 +1,25 @@
+.user-card {
+  background-color: white;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  gap: 10px;
+   &:hover{
+        background-color: rgb(30, 95, 174);
+    }
+  .username{
+    font-weight: bold;
+    font-size: small;
+   
+  }
+  img {
+    width: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+.search-results-conatiner {
+  border: 1px solid grey;
+  height: fit-content;
+}

@@ -1,0 +1,36 @@
+.search-top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:20px;
+    
+}
+.searchBar{
+    padding: 4px;
+    width: 100%;
+    border-style: none;
+    background: transparent;
+    border-bottom: 1px solid black;
+}
+.searchRes{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    box-shadow: 0px 4px 2px -2px gray;
+}
+.user{
+    text-align: center;
+        color: white;
+        margin-top: 2px;
+        background: transparent;
+        font-weight: bold;
+        padding: 3px;
+        border-radius: 2px;
+        /* box-shadow: 0px 4px 4px -1px gray; */
+        font-size: x-small;
+        background: transparent;
+    }
+.sideFoot{
+        display: flex;
+        flex-direction:column-reverse;
+}
