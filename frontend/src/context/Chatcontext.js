@@ -51,7 +51,9 @@ const ChatProvider = ({ children }) => {
         control,
         setControl,
         refresh,
-        setRefresh
+        setRefresh,
+        loading,
+        setLoading
       }}
     >
       {children}

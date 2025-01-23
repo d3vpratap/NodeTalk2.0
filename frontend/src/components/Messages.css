@@ -1,0 +1,26 @@
+/* Add this in your Chatbox.css or Messages.css */
+.messages-container {
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-content {
+  padding-top: 5px;
+}
+
+.message p {
+  margin: 0;
+}

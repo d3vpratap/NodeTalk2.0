@@ -40,14 +40,14 @@ const RecentChat = () => {
         `http://localhost:8000/chats?userId=${user._id}`,
         config
       );
-      setChats(data);
+      await setChats(data);
     } catch (error) {
       console.error("Error fetching chats:", error);
     }
   }
 
   useEffect(() => {
-    console.log("working");
+    console.log("working",{chats});
     accessChats();
   }, [loading,refresh]); // Empty dependency array ensures it runs only once
 

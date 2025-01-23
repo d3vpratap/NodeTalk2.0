@@ -20,6 +20,7 @@ router.post("/chats", async (req, res) => {
   try {
     const { id, user } = req.body;
     const friend = await User.findById(id);
+    console.log(friend.name);
     const existingChat = await Chat.findOne({
       isGroupChat: false,
       users: { $all: [user._id, friend.id] }, // `$all` checks if both users are present

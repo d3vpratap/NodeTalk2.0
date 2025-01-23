@@ -5,7 +5,9 @@ import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Navbar from "../components/Navbar";
 import { useForm } from "react-hook-form";
+import { ChatState } from "../context/Chatcontext";
 const Register = () => {
+  const { loading, setLoading, user, setUser } = ChatState();
   const navigate = useNavigate();
   const {
     register,
@@ -16,15 +18,18 @@ const Register = () => {
 
   async function onSubmit(d) {
     try {
+      setLoading(true);
       const { data } = await axios.post("http://localhost:8000/register", {
         name: d.username,
         email: d.email,
         password: d.password,
       });
       //   console.log("Success:", response.data);
+      setUser(data);
       localStorage.setItem("userInfo", JSON.stringify(data));
       localStorage.setItem("authToken", data.token);
-      navigate("/chat");
+      setLoading(false);
+      navigate("/");
     } catch (error) {
       console.error("Error:", error.response?.data || error.message);
     }

@@ -56,11 +56,11 @@ const Sidebar = (props) => {
           value={search}
           className="searchBar"
         />
-        <p className="user">Hello-{user.name}</p>
-        <button className="btn btn-success btn-sm" onClick={handleSearch}>
+        <p className="user btn me-2 btn-custom">{user.email}</p>
+        <button className="btn  btn-secondary btn-sm" onClick={handleSearch}>
           {loading ? "Searching" : "Search"}
         </button>
-        <div className="group-action">
+        <div className="group-action btn btn-sm">
           <CreateGroup /> {/* Use the CreateGroup component */}
         </div>
       </div>

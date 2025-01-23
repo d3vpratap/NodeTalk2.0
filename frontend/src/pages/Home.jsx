@@ -27,7 +27,7 @@ const Home = () => {
         password: d.password,
       });
       console.log(data);
-      setUser(data);
+      await setUser(data);
       localStorage.setItem("userInfo", JSON.stringify(data));
       localStorage.setItem("authToken", data.token);
       navigate("/chat");
